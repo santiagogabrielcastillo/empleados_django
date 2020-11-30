@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Página de Inicio del Sistema de Empleados {% endblock %}
+
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<!--Bloque bienvenida-->
+
+<div class="grid-x align-center" style="margin: 15px;">
+  <h1 class="cell large-8" style="font-size: 25px; text-align: center; font-weight: bold;">BIENVENIDO AL SISTEMA DE ADMINISTRACIÓN DE PERSONAL</h1>
+</div>
+
+<!--Fin bloque bienvenida-->
+
+<!--Imagen de portada-->
+  <div class="orbit" role="region" aria-label="Bienvenida" data-orbit>
+      <div class="orbit-wrapper">
+        <div class="orbit-controls">
+          <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+          <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+        </div>
+        <ul class="orbit-container">
+          <li class="is-active orbit-slide">
+            <figure class="orbit-figure" style="height:600px;">
+              <img class="orbit-image" src="{% static 'img/img1.jpg' %}" alt="Imagen 1">
+              <figcaption class="orbit-caption">Paris</figcaption>
+            </figure>
+          </li>
+          <li class="orbit-slide">
+            <figure class="orbit-figure" style="height:600px;">
+              <img class="orbit-image" src="{% static 'img/img2.jpg' %}" alt="Imagen 2">
+              <figcaption class="orbit-caption">Copenhague</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+<!--Fin portada-->
+{% endblock %}

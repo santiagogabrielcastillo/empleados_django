@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Eliminar registro
+{% endblock title %}
+
+
+{% block content %}
+{% include 'includes/header.html' %}
+
+<div class="grid-container">
+    <div class="grid-x">
+        <h1 class="cell" style="margin: 25px;">Eliminar registro de {{ object.full_name }}</h1>
+        <div class="cell">
+            <form method="POST">{% csrf_token %}
+                <div class="callout alert">
+                    <h5>¿Estás seguro que quieres eliminar este registro?</h5>
+                    <p>Recuerde que esta acción elimina todos los datos permanentemente.</p>
+                    <button class="button" type="submit">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    
+
+
